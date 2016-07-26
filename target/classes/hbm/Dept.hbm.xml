@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.yawei.pojo">
+    <class table="t_dept" name="Dept">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="deptname"/>
+        <set name="employeeSet" inverse="true" cascade="delete">
+            <key column="deptid"/>
+            <one-to-many class ="Employee"/>
+        </set>
+    </class>
+
+</hibernate-mapping>
