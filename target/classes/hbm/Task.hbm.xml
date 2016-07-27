@@ -1,0 +1,13 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.yawei.pojo">
+    <class table="t_task" name="Task">
+        <cache usage="read-write"/>
+        <id name="id">
+            <generator class="uuid"/>
+        </id>
+        <property name="title"/>
+    </class>
+
+</hibernate-mapping>
